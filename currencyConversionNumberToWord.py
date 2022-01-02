@@ -18,11 +18,8 @@ below_ten = ['', 'One ', 'Two ', 'Three ', 'Four ', 'Five ', 'Six ', 'Seven ', '
 def integerToEnglishCurrency(num): #Argument type: non-negative Number/Integer, Return type: String
     """
     integerToEnglishCurrency function takes num parameter of type integer. It checks if number is 0 and returns Zero if true.
-
     Number is converted string and necessary number of 0's are added to convert strings length into multiple of three.
-
     Loop through modified String in length of three. Increment count values by 3 and assign converted string to converted variable.
-
     Return string representation of given currency.
 
     """
@@ -34,6 +31,9 @@ def integerToEnglishCurrency(num): #Argument type: non-negative Number/Integer, 
 
     #Else: number to string
     numStr = str(num)
+
+    if len(numStr) > 15:
+        return print("Value too big.")
 
     #If: String.length % 3 not equal to 0 
     if 3-(len(numStr) % 3) != 3:  
